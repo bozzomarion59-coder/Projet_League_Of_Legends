@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Quel champion est surnommé 'The Dark Child' ?",
+    "options": ["Annie", "Lux", "Ahri", "Syndra"],
+    "answerIndex": 0
+  },
+  {
+    "question": "Quelle est la capacité ultime de Yasuo ?",
+    "options": ["Steel Tempest", "Wind Wall", "Sweeping Blade", "Last Breath"],
+    "answerIndex": 3
+  },
+  {
+    "question": "Dans quelle région vient Jinx ?",
+    "options": ["Demacia", "Noxus", "Piltover", "Zaun"],
+    "answerIndex": 3
+  },
+  {
+    "question": "Combien de dragons élémentaires différents existent sur la Faille de l'invocateur ?",
+    "options": ["3", "4", "5", "6"],
+    "answerIndex": 1
+  },
+  {
+    "question": "Quel objet donne le plus de points de vie ?",
+    "options": ["Warmog's Armor", "Frozen Heart", "Sunfire Aegis", "Spirit Visage"],
+    "answerIndex": 0
+  },
+  {
+    "question": "Qui est le frère de Darius ?",
+    "options": ["Garen", "Draven", "Swain", "Vladimir"],
+    "answerIndex": 1
+  },
+  {
+    "question": "Quel champion peut se transformer en différentes formes ?",
+    "options": ["Nidalee", "Elise", "Jayce", "Tous ces champions"],
+    "answerIndex": 3
+  },
+  {
+    "question": "Quelle est la mascotte de League of Legends ?",
+    "options": ["Teemo", "Poro", "Baron Nashor", "Gromp"],
+    "answerIndex": 1
+  },
+  {
+    "question": "Combien de joueurs composent une équipe en Summoner's Rift ?",
+    "options": ["3", "4", "5", "6"],
+    "answerIndex": 2
+  },
+  {
+    "question": "Quel champion a la phrase culte : 'Demacia!' ?",
+    "options": ["Jarvan IV", "Garen", "Lux", "Xin Zhao"],
+    "answerIndex": 1
+  }
+]
