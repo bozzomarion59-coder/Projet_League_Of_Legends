@@ -1,16 +1,48 @@
-# React + Vite
+# Le projet League of Legends :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application web interactive permettant d'explorer l'univers riche de League of Legends : son lore, ses champions, leurs relations et les différentes régions.  
+Ce projet a été conçu dans le cadre de ma formation en développement web full-stack.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Fonctionnalités :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Exploration du Lore : histoire de chaque champion.
+- Présentation des Champions : biographies, compétences, illustrations et détails des personnages.
+- Exploration des Régions : cartes interactives et descriptions des cultures et mystères, rattachée aux champions.
+- Quiz interactif : testez vos connaissances sur le lore et les champions.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies utilisées :
+
+- Frontend: React 
+- Requête : Axios 
+- Backend/API : League of Legends API via riogames
+
+
+## Installation et lancement :
+
+1. **Cloner le repo** :
+   - git clone lien_du_projet_GitHub
+   - cd nom_du_projet
+   
+2. **Installer les dépendances** :
+   - npm install
+   
+3. **Lancer l'application** :
+   - npm start
+
+4. **Ouvrir http://localhost:3000 dans votre navigateur.**
+
+
+## Objectifs personnels :
+
+Ce projet m’a permis de :
+- Approfondir mes compétences en React et API REST.
+- Structurer un projet complet avec Git/GitHub.
+- Créer une application ludique et visuellement attractive.
+- Mettre en valeur mon portfolio avec un projet original.
+- Appronfondir mes compétences en Full-Stack
+
+## Auteur :
+Marion BOZZO | Formation : ForEachAcademy | Stack : React, JavaScript, Node.js, Express, MySQL
