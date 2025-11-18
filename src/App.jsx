@@ -10,7 +10,7 @@ import ItemsPage from './assets 2/Pages/ItemsPage';
 import ItemDetails from './assets 2/Pages/ItemDetails';
 import RegionsPage from './assets 2/Pages/RegionsPage';
 import RegionDetails from './assets 2/Pages/RegionDetails';
-
+import QuizPage from './assets 2/Pages/QuizPage';
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
           <Route path='/items/:id' element={<ItemDetails />} />
           <Route path="/regions" element={<RegionsPage />} />
           <Route path='/regions/:id' element={<RegionDetails />} />
+          <Route path='/quizz' element={<QuizPage />} />
 
 
         </Routes>

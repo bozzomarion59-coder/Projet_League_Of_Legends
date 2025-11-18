@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
-import { Container, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ItemsService from "../../Services/ItemsService";
 import { useParams } from "react-router-dom";
+
+// Fonction utilitaire pour supprimer toutes les balises HTML
+function stripHtmlTags(str) {
+  return str ? str.replace(/<[^>]*>/g, "") : "";
+}
 
 const ItemsDetails = () => {
   const { id } = useParams();
@@ -26,73 +31,74 @@ const ItemsDetails = () => {
   }, [id]);
 
   if (!item) {
-    return <p style={{ color: "white" }}>Chargement...</p>;
-  } // j'ai demandé à l'ia car sinon rien ne s'affiché
+    return <p style={{ color: "white", textAlign: "center", marginTop: "50px" }}>Chargement...</p>;
+  }
 
   return (
-    <Container className="d-flex justify-content-center mt-4">
-      <Card className="shadow-lg border-0 bg-dark text-white w-75">
-        <Card.Header className="text-center bg-danger text-white">
-          <h2>{item.name}</h2>
-        </Card.Header>
+    <Container fluid className="my-4 px-3">
+      {/* Image et nom centrés */}
+      <div className="d-flex flex-column align-items-center mb-4">
+        <img
+          src={`https://ddragon.leagueoflegends.com/cdn/15.21.1/img/item/${item.image.full}`}
+          alt={item.name}
+          className="img-fluid mb-3"
+          style={{
+            maxHeight: "250px",
+            background: "#f8f9fa",
+            borderRadius: "8px",
+            padding: "10px",
+          }}
+        />
+        <h1 style={{ color: "darkGreen", textAlign: "center" }}>{item.name}</h1>
+      </div>
 
-        <Card.Body className="d-flex">
-          {/* Colonne image */}
-          <div className="col-5 d-flex justify-content-center align-items-center">
-            <img
-              src={`https://ddragon.leagueoflegends.com/cdn/15.21.1/img/item/${item.image.full}`}
-              alt={item.name}
-              style={{
-                maxHeight: "250px",
-                objectFit: "contain",
-                background: "#f8f9fa",
-                borderRadius: "8px",
-                padding: "10px"
-              }}
-            />
-          </div>
+      {/* Deux colonnes */}
+      <div className="row justify-content-center">
+        {/* Colonne gauche : Description */}
+        <div className="col-12 col-md-6 mb-4">
+          <h2 style={{ color: "darkRed" }}>Description</h2>
+          <p style={{ color: "white" }}>{stripHtmlTags(item.description)}</p>
 
-          {/* Colonne détails */}
-          <div className="col-7 ps-4">
-            <h5 className="text-danger text-decoration-underline" >Description :</h5>
-            <p>{item.description}</p>
+          <h2 style={{ color: "darkRed" }}>Colloq</h2>
+          <p style={{ color: "white" }}>{stripHtmlTags(item.colloq)}</p>
+        </div>
 
-            <h5 className="text-danger text-decoration-underline">Colloq :</h5>
-            <p>{item.colloq}</p>
+        {/* Colonne droite : Statistiques et coût */}
+        <div className="col-12 col-md-6 mb-4">
+          <h2 style={{ color: "darkRed" }}>Statistiques</h2>
+          {item.stats &&
+            Object.entries(item.stats).map(([key, value]) => (
+              <p key={key} style={{ color: "white" }}>
+                {key}: {value}
+              </p>
+            ))}
 
-            <h5 className="text-danger text-decoration-underline">Statistiques :</h5>
-            {item.stats &&
-              Object.entries(item.stats).map(([key, value]) => (
-                <p key={key}>{key}: {value}</p>
-              ))}
+          <h2 style={{ color: "darkRed" }}>Plaintext</h2>
+          <p style={{ color: "white" }}>{stripHtmlTags(item.plaintext)}</p>
 
-            <h5 className="text-danger text-decoration-underline">Plaintext :</h5>
-            <p>{item.plaintext}</p>
-
-            <h5 className="text-danger text-decoration-underline">Coût :</h5>
-            <table className="table table-white table-striped table-sm w-75">
-              <tbody>
-                <tr>
-                  <td>Base</td>
-                  <td>{item.gold?.base}</td>
-                </tr>
-                <tr>
-                  <td>Purchasable</td>
-                  <td>{item.gold?.purchasable ? "Oui" : "Non"}</td>
-                </tr>
-                <tr>
-                  <td>Total</td>
-                  <td>{item.gold?.total}</td>
-                </tr>
-                <tr>
-                  <td>Sell</td>
-                  <td>{item.gold?.sell}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </Card.Body>
-      </Card>
+          <h2 style={{ color: "darkRed" }}>Coût</h2>
+          <table className="table table-dark table-striped table-sm w-100">
+            <tbody>
+              <tr>
+                <td>Base</td>
+                <td>{item.gold?.base}</td>
+              </tr>
+              <tr>
+                <td>Purchasable</td>
+                <td>{item.gold?.purchasable ? "Oui" : "Non"}</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>{item.gold?.total}</td>
+              </tr>
+              <tr>
+                <td>Sell</td>
+                <td>{item.gold?.sell}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </Container>
   );
 };

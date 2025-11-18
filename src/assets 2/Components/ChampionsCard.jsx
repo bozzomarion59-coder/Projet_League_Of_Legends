@@ -17,7 +17,7 @@ function ChampionsCard() {
   return (
     <div className="row g-4 p-4">
       {champions.map(champion => (
-        <Card key={champion.id} className="col-3 shadow-sm border-0 mb-4" onClick={() => navigate(`/champions/${champion.id}`)}>
+        <Card style={{backgroundColor: "#2e2e2e", color:"white"}} key={champion.id} className="col-3 shadow-sm border-0 mb-4" onClick={() => navigate(`/champions/${champion.id}`)}>
           <Card.Img
             variant="top"
             src={`https://ddragon.leagueoflegends.com/cdn/15.21.1/img/champion/${champion.image.full}`}

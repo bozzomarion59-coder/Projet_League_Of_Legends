@@ -31,10 +31,10 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link onClick={() => { navigate('/') }}>Accueil</Nav.Link>
-                        <Nav.Link onClick={() => { navigate('/quizz') }}>Quizz</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/champions') }}>Champions et leur histoire</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/regions') }}>Régions</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/items') }}>Items</Nav.Link>
+                        <Nav.Link onClick={() => { navigate('/quizz') }}>Quizz</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

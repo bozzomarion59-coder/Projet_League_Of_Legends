@@ -49,7 +49,7 @@ function RegionsCard() {
         <Card
           key={region.name}
           className="col-3 shadow-sm border-0 mb-4"
-          style={{ cursor: "pointer", transition: "transform 0.2s" }}
+          style={{ backgroundColor: "#2e2e2e", color: "white" }}
           onClick={() => navigate(`/regions/${region.name}`)}
           onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.03)")}
           onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
@@ -62,7 +62,7 @@ function RegionsCard() {
               maxHeight: "180px",
               objectFit: "cover",
               borderRadius: "8px",
-              background: "#f8f9fa"
+              backgroundColor: "#2e2e2e"
             }}
           />
           <Card.Body>

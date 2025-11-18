@@ -25,7 +25,9 @@ const HomePage = () => {
 
     return <>
         <Container fluid className="d-flex flex-column align-items-center pt-3 pb-6 gap-3">
-            <img className="home-image" src="https://www.pedagojeux.fr/wp-content/uploads/2019/11/1280x720_LoL.jpg" alt="ImageLoL" />
+            <img className="home-image" src="https://www.pedagojeux.fr/wp-content/uploads/2019/11/1280x720_LoL.jpg" alt="ImageLoL" 
+            style={{width: "100vw", height: "auto", display: "block"}}
+            />
         </Container>
         
     </>;
